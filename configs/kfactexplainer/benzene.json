@@ -1,0 +1,92 @@
+{
+    "num_hops": 3,
+    "alpha": 0.5,
+    "top_k": 20,
+    "epochs": 20,
+    "device": "cuda:1",
+    "seed": 10,
+    "batch_size": 64,
+    "use_hook": false,
+    "scheduler": null,
+    "pretrained": false,
+    "save_params": false,
+    "shuffle": false,
+    "mode": "ood",
+    "hook_point": "range(0, 30)",
+    "generator_train_point": "range(0, 30)",
+    "use_edge_weight": false,
+    "remove_strategy": "soft",
+    "ood_explain": true,
+    "knn_loss": false,
+    "generator_cfgs": {
+        "K": 30,
+        "epochs": 10,
+        "denoise_fn": "mlp",
+        "input_dim": 60,
+        "output_dim": 1,
+        "hidden_dim": 128,
+        "coeffs": {
+            "knn_loss": 1.0,
+            "loss2": 1.0,
+            "bias": 0.0,
+            "temp0": 5.0,
+            "temp1": 2.0
+        },
+        "optimizer_cfgs": {
+            "name": "adam",
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "grad_fn": null
+        },
+        "scheduler_cfgs": {
+            "name": null,
+            "gamma": 0.99
+        }
+    },
+    "gnn_cfgs": {
+        "paper": "gcn",
+        "epochs": 300,
+        "shuffle": false,
+        "clip_max": 2.0,
+        "input_dim": 10,
+        "output_dim": 4,
+        "hidden_dim": 64,
+        "early_stopping": 100,
+        "optimizer_cfgs": {
+            "name": "adam",
+            "lr": 0.003,
+            "weight_decay": 0.0,
+            "grad_fn": null
+        },
+        "scheduler_cfgs": {
+            "name": null,
+            "gamma": 0.99
+        }
+    },
+    "explainer_cfgs": {
+        "epochs": 30,
+        "k": 10,
+        "coeffs": {
+            "reg_size": 0.01,
+            "reg_ent": 1.0,
+            "EPS": 1e-15,
+            "edge_reduction": "sum",
+            "temp0": 5.0,
+            "temp1": 2.0,
+            "bias": 0.0
+        },
+        "optimizer_cfgs": {
+            "name": "adam",
+            "lr": 0.005,
+            "weight_decay": 0.0,
+            "grad_fn": null
+        },
+        "scheduler_cfgs": {
+            "name": null,
+            "gamma": 0.99
+        }
+    },
+    "metric": "acc",
+    "seeds": "range(6, 11)",
+    "num_labels": 2
+}
