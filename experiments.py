@@ -19,7 +19,7 @@ def load_save_name(cfgs):
 class Experiments(object):
     r"""
     Experiment for 2 part for both proposed framework and baseline:
-    1. Accuracy:        compute roc-auc metric
+    1. Accuracy:        compute auc-roc metric
     2. Robust Fidelity: compute robust fidelity value
     """
     def __init__(self, args):
