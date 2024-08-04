@@ -25,7 +25,7 @@ Four real-world graph classification datasets are employed to evaluate EnDist fr
 - `Alkane-Carbonyl`
 - `Fluoride-Carbonyl`
 
-All datasets are stored on the `data.rar` file.
+All datasets are given in the `data.rar` file.
 
 ### Methods
 
