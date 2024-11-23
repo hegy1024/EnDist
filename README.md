@@ -1,6 +1,6 @@
 # EnDist
 
-Code for the paper "Enhancing Graph Neural Network Explainers Using a Distribution Shift Consistency-Guided Graph Generator"
+Code for the paper "Enhancing Graph Neural Network Explainers Using a Distribution Shift Consistency-Guided Generator"
 
 ## Installation
 Requirments:
